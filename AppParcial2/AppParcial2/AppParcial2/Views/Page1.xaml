@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+              BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             mc:Ignorable="d"
+             Title="photo"
+             mc:Ignorable="d"
+             x:Class="AppParcial2.Views.Page1">
+   
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding Name}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Keyboard="{Binding Number}"
+               Placeholder="Id"
+               IsPassword="False"
+               VerticalOptions="CenterAndExpand" />
+            <Button Text="Llamar API Rest"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="{Binding Click}" />
+            <Label Text="{Binding Title}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Image Source="{Binding Photos}" 
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
